@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Eine Webseite></title>
+  </head>
+  <body>
+    <label for="eingabe">
+      Ihr Name: <input id="feld" name="eingabe"></input>
+    </label>
+    <button id="knopf" type="button" onclick="zeigeNamen()">
+      Klick mich!
+    </button>
+    <div id="bereich"></div>
+  </body>
+  <footer>
+    <script type = "text/javascript">
+      function zeigeNamen()
+      {
+        var name = document.getElementById('feld').value;
+        var el = document.getElementById("bereich");
+        if (name == "")
+        {
+            el.innerText = "Hallo Unbekannter!";
+        }
+        else
+        {
+            el.innerText = "Hallo " + name;
+        }
+      }
+    </script>
+  </footer>
+</html>
